@@ -1,0 +1,321 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(254,227,236);
+}
+
+.birthday_card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+}
+
+.front_card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2), 30px 0 50px rgba(0,0,0,0.4);
+    background-color: rgb(205,235,250);
+    transform-origin: left;
+    transition: 0.6s;
+}
+
+.inside_card {
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    box-shadow: inset 80px 20px 100px rgba(0,0,0,0.2);
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.title {
+    font-family: "Pacifico", cursive;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+    color: linen;
+    text-shadow: 2px 2px 2px rgb(242,120,159);
+    margin: 20px 15px 5px 15px;
+}
+
+.wishes {
+    font-family: "Swanky and Moo Moo", cursive;
+    font-size: large;
+    text-align: justify;
+    margin: 40px 40px 35px 40px;
+}
+
+.from {
+    font-family: "Swanky and Moo Moo", cursive;
+    font-size: small;
+    text-align: justify;
+    margin: 35px 40px 40px 40px;
+}
+
+.tilt {
+    transform: rotate(5deg);
+    box-shadow: inset 80px 20px 100px rgba(0,0,0,0.2), 30px 0 50px rgba(0,0,0,0.4);
+}
+
+.open_card {
+    transform: rotateY(-160deg);
+}
+
+.clean {
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+/*Hover version
+
+.birthday_card:hover {
+    transform: rotate(5deg);
+    box-shadow: inset 80px 20px 100px rgba(0,0,0,0.2), 30px 0 50px rgba(0,0,0,0.4);
+}
+
+.birthday_card:hover .front_card {
+    transform: rotateY(-160deg);
+}
+
+.birthday_card:hover .decorate {
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+.birthday_card:hover .title {
+    visibility: hidden;
+    transition: 0.2s;
+}*/
+
+/*Decoration*/
+
+.decorate {
+    position: absolute;
+}
+
+.balloon_1 {
+    position: absolute;
+    background-color: rgba(249,153,183,0.8);
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    left: -20px;
+    top: 70px;
+    box-shadow: inset 8px 13px 17px rgba(0,0,0,0.2);
+}
+
+.balloon_2 {
+    position: absolute;
+    background-color: rgba(249,197,213,0.8);
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    left: 40px;
+    top: 15px;
+    box-shadow: inset 8px 13px 17px rgba(0,0,0,0.2);
+}
+
+.balloon_3 {
+    position: absolute;
+    background-color: rgba(254,227,236,0.8);
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    left: 105px;
+    top: 55px;
+    box-shadow: inset 8px 13px 17px rgba(0,0,0,0.2);
+}
+
+.balloon_4 {
+    position: absolute;
+    background-color: rgba(255,135,202,0.8);
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    left: 185px;
+    top: 35px;
+    box-shadow: inset 8px 13px 17px rgba(0,0,0,0.2);
+}
+
+.balloon_5 {
+    position: absolute;
+    background-color: rgba(255,166,213,0.8);
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    left: 50px;
+    top: 115px;
+    box-shadow: inset 8px 13px 17px rgba(0,0,0,0.2);
+}
+
+.balloon_6 {
+    position: absolute;
+    background-color: rgba(255,196,225,0.8);
+    width: 85px;
+    height: 95px;
+    border-radius: 50%;
+    left: 155px;
+    top: 125px;
+    box-shadow: inset 8px 13px 17px rgba(0,0,0,0.2);
+}
+
+/*Balloons string*/
+
+.balloon_1::before {
+    content: "";
+    position: absolute;
+    width: 0.5px;
+    height: 200px;
+    background-color: rgba(245,240,130,0.4);
+    left: 43px;
+    top: 95px;
+}
+
+.balloon_2::before {
+    content: "";
+    position: absolute;
+    width: 0.5px;
+    height: 200px;
+    background-color: rgba(245,240,130,0.4);
+    left: 43px;
+    top: 95px;
+}
+
+.balloon_3::before {
+    content: "";
+    position: absolute;
+    width: 0.5px;
+    height: 200px;
+    background-color: rgba(245,240,130,0.4);
+    left: 41px;
+    top: 95px;
+}
+
+.balloon_4::before {
+    content: "";
+    position: absolute;
+    width: 0.5px;
+    height: 200px;
+    background-color: rgba(245,240,130,0.4);
+    left: 43px;
+    top: 95px;
+}
+
+.balloon_5::before {
+    content: "";
+    position: absolute;
+    width: 0.5px;
+    height: 200px;
+    background-color: rgba(245,240,130,0.4);
+    left: 41px;
+    top: 95px;
+}
+
+.balloon_6::before {
+    content: "";
+    position: absolute;
+    width: 0.5px;
+    height: 200px;
+    background-color: rgba(245,240,130,0.4);
+    left: 43px;
+    top: 95px;
+}
+
+/*Balloons tie*/
+
+.balloon_1::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 10px solid rgba(249,153,183,0.75);
+    top: 92px;
+    left: 37px;
+}
+
+.balloon_2::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 10px solid rgba(249,197,213,0.8);
+    top: 92px;
+    left: 37px;
+}
+
+.balloon_3::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 10px solid rgba(254,227,236,0.8);
+    top: 92px;
+    left: 35.5px;
+}
+
+.balloon_4::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 10px solid rgba(255,135,202,0.8);
+    top: 92px;
+    left: 37px;
+}
+
+.balloon_5::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 10px solid rgba(255,166,213,0.8);
+    top: 92px;
+    left: 36px;
+}
+
+.balloon_6::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 10px solid rgba(255,196,225,0.8);
+    top: 92px;
+    left: 37px;
+}
+
+/*Logo*/
+.m {
+    position: absolute;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    bottom: 35px;
+    right: 112px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.h {
+    position: absolute;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;  
+    bottom: 35px;
+    right: 113px;
+}
+
+.pm, .ph {
+    margin: 0 5px;
+    padding: 0 5px;
+}
